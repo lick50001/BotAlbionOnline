@@ -1,14 +1,24 @@
-﻿<Window x:Class="ItsNotMe.MainWindow"
+﻿<Window x:Class="ItsNotMe.Pages.OverlayWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ItsNotMe"
+        xmlns:local="clr-namespace:ItsNotMe.Pages"
         mc:Ignorable="d"
         Title="Overlay" Height="100" Width="300"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Topmost="True" ShowInTaskbar="False" IsHitTestVisible="False">
     <Grid>
-        
+        <TextBlock x:Name="ValueText" 
+                   Text="0" 
+                   FontSize="24" 
+                   Foreground="Lime" 
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="2" Color="Black" ShadowDepth="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
     </Grid>
 </Window>
